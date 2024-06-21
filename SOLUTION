@@ -1,17 +1,46 @@
-<your secret here>      <<  Change this line. The secret must be placed in the first line
+814c5723c21e7e90a3eae36c8df3c513
 
 
 Kernel System Calls
 -------------------
-<Your Answer>
+The whatIdo script creates a new directory called welcomeToDevOpsTheHardWay, if not already existent, in the CURRENT directory.
+Within the created directory, it creates a new file called goodLuck, and writes the following content into it :
+"There you go... tell me what I do..."
 
 
 Broken Symlink
 -------------------
-<Your Answer>
-
+Uber's code is wrong because the link creation process uses RELATIVE paths in order the create the sym-link instead of an ABSOLUTE path.
+In order to fix the problem, the backup file creation script should create a sym-link pointing at the ABSOLUTE path of the last backup file.
+If programmed correctly, moving the symbolic link shouldn't be an issue anymore because it will always point to the non-changing absolute path of the backup file.
 
 
 Binary Numbers
 --------------
-<Your Answer>
+1.  Convert the following binary numbers to decimals: 111, 100, 10110.
+    111 = 7
+    100 = 4
+    10110 = 22
+
+2.  What is the available decimal range represented by 8 bits binary number?
+    A binary number containing 8 bits can be translated to this decimal range :
+    0 : 255
+
+3.  Given a 9 bits binary number, suggest a method to represent negative numbers between -255 to 255.
+    I would suggest setting the leftmost bit as a bit with the positivity meaning.
+    For example, if the leftmost bit of a binary number is 0, it is positive. If it's 1, then it's negative.
+    This way, you can represent number in the range -255 : 255 (because only 8 bits are required for 0:255 values).
+
+    This can work the other way around, ofcourse, setting the leftmost bit to 1 to suggest the number is positive...
+
+4.  Suggest a method to represent a floating point numbers (e.g. 12.3, 15.7, 0.2) using 8 bits binary numbers.
+    Given only 8 bits for floating point numbers, I would SPLIT the single byte in half.
+    The leftmost half (4 first bits) will represent the integer, whole part, while the rightmost half (4 last bits) will represent the decimal part of the number.
+    Using this method, one could represent number in the following range :
+    0 : 15 . 0 : 15
+    The following syntax is received :
+    XXXX.YYYY (X for integers, Y for decimal)
+    This way,
+    12.3 = 11000011
+    15.7 = 11110111
+    etc...
