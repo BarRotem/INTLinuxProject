@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #Create required dir and file within
+cd src
 mkdir ./secretDir
 touch ./secretDir/.secret
 
